@@ -1,5 +1,5 @@
 var num = 0;
-var button = document.querySelector(".box .personal .box2 .button")
+var button = document.querySelector(".container .personal .box2 .button")
 var one = document.getElementById("1")
 var two = document.getElementById("2")
 var three = document.getElementById("3")
@@ -10,7 +10,6 @@ button.addEventListener("click", function(e) {
         console.log(num);
         num++;
         e.preventDefault();
-
 
         switch (num) {
             case 1:
