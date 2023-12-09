@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Multi-Step Form</title>
+</head>
+<body>
+  <div class="form-container">
+    <div class="steps">
+      <div class="step" data-step="1">
+        <div class="step-number">1</div>
+        <div class="step-title">STEP 1 YOUR INFO</div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-number">2</div>
+        <div class="step-title">STEP 2 SELECT PLAN</div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-number">3</div>
+        <div class="step-title">STEP 3 ADD-ONS</div>
+      </div>
+      <div class="step" data-step="4">
+        <div class="step-number">4</div>
+        <div class="step-title">STEP 4 SUMMARY</div>
+      </div>
+    </div>
+    
+    <form id="multi-step-form">
+      <!-- Sayfa 1 -->
+      <div class="step" data-step="1">
+        <h2>Personal Info</h2>
+        <p>Please provide your name, email address, and phone number.</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <button class="next-btn" data-step="2">Next Step</button>
+      </div>
+      
+      <!-- Sayfa 2 -->
+      <div class="step" data-step="2">
+        <h2>Select Your Plan</h2>
+        <p>You have the option of monthly or yearly billing.</p>
+        <!-- Plan seçenekleri -->
+        <div class="plan-option" id="arcade" data-plan="Arcade" data-price="9">Arcade<br>$9/mo</div>
+        <div class="plan-option" id="advanced" data-plan="Advanced" data-price="12">Advanced<br>$12/mo</div>
+        <div class="plan-option" id="pro" data-plan="Pro" data-price="15">Pro<br>$15/mo</div>
+        <!-- Monthly / Yearly seçenekleri -->
+        <div class="billing-options">
+          <label><input type="radio" name="billing" value="monthly"> Monthly</label>
+          <label><input type="radio" name="billing" value="yearly"> Yearly</label>
+        </div>
+        <button class="prev-btn" data-step="1">Go Back</button>
+        <button class="next-btn" data-step="3">Next Step</button>
+      </div>
+
+      <!-- Sayfa 3 -->
+      <div class="step" data-step="3">
+        <h2>Pick Add-ons</h2>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <!-- Add-on seçenekleri -->
+        <div class="addon-option" data-addon="Online Service" data-price="1">
+          <input type="checkbox" id="online-service">
+          <label for="online-service">
+            <span class="addon-checkbox"></span>
+            Online Service<br>
+            Access to multiplayer games. +$1/mo
+          </label>
+        </div>
+        <div class="addon-option" data-addon="Larger Storage" data-price="2">
+          <input type="checkbox" id="larger-storage">
+          <label for="larger-storage">
+            <span class="addon-checkbox"></span>
+            Larger Storage<br>
+            Extra 1TB of cloud save. +$2/mo
+          </label>
+        </div>
+        <div class="addon-option" data-addon="Customizable Profile" data-price="3">
+          <input type="checkbox" id="custom-profile">
+          <label for="custom-profile">
+            <span class="addon-checkbox"></span>
+            Customizable Profile<br>
+            Custom theme on your profile. +$3/mo
+          </label>
+        </div>
+        <button class="prev-btn" data-step="2">Go Back</button>
+        <button class="next-btn" data-step="4">Next Step</button>
+      </div>
+      
+      <!-- Sayfa 4 -->
+      <div class="step" data-step="4">
+        <h2>Finishing Up</h2>
+        <p>Double-check everything looks OK before confirming.</p>
+        <!-- Seçilen plan ve özellikler -->
+        <div id="confirmation-summary"></div>
+        <div id="total-price"></div>
+        <button class="prev-btn" data-step="3">Go Back</button>
+        <button type="submit">Confirm</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
