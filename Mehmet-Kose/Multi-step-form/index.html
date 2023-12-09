@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi step form</title>
+    <link rel="stylesheet" href="sytle.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="steps">
+            <div class="step">
+                <h2 id="1">1</h2>
+                <ul>
+                    <li>Step 1</li>
+                    <li>Your-Info</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h2 id="2">2</h2>
+                <ul>
+                    <li>Step 2</li>
+                    <li>Select A Plan</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h2 id="3">3</h2>
+                <ul>
+                    <li>Step 3</li>
+                    <li>Add-Ons</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h2 id="4">4</h2>
+                <ul>
+                    <li>Step 4</li>
+                    <li>Summary</li>
+                </ul>
+            </div>
+        </div>
+        <div class="personal">
+            <div class="text">
+                <h1>Personal Info</h1>
+                <span>Please provide your name, e-mail and phone number.</span>
+            </div>
+            <div class="box2">
+                <div class="input">
+                    <h4>Name</h4>
+                    <input type="text" name="name" placeholder="e.g. Tom Cruise">
+                </div>
+                <div class="input">
+                    <h4>E-mail</h4>
+                    <input type="email" name="email" placeholder="e.g. Cruise_Tom@hotmail">
+                </div>
+                <div class="input">
+                    <h4>Phone Number</h4>
+                    <input type="number" name="number" placeholder="e.g. +12 3456 789 12 34">
+                </div>
+                <input type="button" value="Next step" class="button">
+            </div>
+        </div>
+    </div>
+    <div class="container2"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
