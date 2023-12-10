@@ -1,0 +1,472 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul li {
+    list-style: none;
+}
+.container{
+    width: 1150px;
+    margin: 0 auto;
+}
+.section-title{
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section-title.light{
+    color: white;
+}
+/*Header*/
+header{
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+header .logo{
+    float: left;
+}
+header .logo h2{
+    height: 100%;
+    line-height: 75px;
+    color:red;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+header nav{
+    height: 100%;
+    float: right;
+}
+header nav ul{
+    height: 100%;
+    line-height: 75px;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+header nav ul li:hover{
+    color: rgb(128, 0, 0);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+header nav ul li {
+    color: red;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none ;
+}/*Header end*/
+
+/*Hero Image*/
+section.hero-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0) -100%, rgba(0,0,0,1) 100%), url(https://assets.nflxext.com/ffe/siteui/vlv3/9db4a880-3034-4e98-bdea-5d983e86bf52/f141d63b-380e-47b0-baef-82d27b20b815/TR-tr-20230925-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+section.hero-image .container .content{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 300px;
+    position: relative;
+    z-index: 1;
+}
+section.hero-image .content h2{
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+}
+section.hero-image .content p{
+    font-size: 16px;
+    padding-right: 10px;
+    font-weight: 500;
+    color: white;
+}
+section.hero-image .container .content input{
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: red;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 5px;
+}
+section.hero-image .container .content input:hover{
+    color: white;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+section.hero-image .filtre{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0,0,0,.4);
+    top: 0;
+    z-index: 0;
+}/*Hero Image end*/
+
+/*How To Use*/
+section.how-to-use{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+}
+section.how-to-use .container .wrapper{
+    margin: 0 auto;
+    width: 1190px;
+}
+section.how-to-use .container .wrapper .item{
+    background-color: white ;
+    float: left;
+    width: 375px;
+    text-align: center;
+    padding: 10px;
+    border: 10px solid black;
+    margin-right: 20px;
+    border-radius: 10px;
+    height: 170px;
+    box-shadow: 10px 10px 20px black;
+}
+section.how-to-use .container .wrapper .item:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 10px solid rgb(20, 20, 20);
+    transition: background-color 0.5s ease;
+}
+section.how-to-use .container h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}/*How to Use end*/
+
+/*Db info*/
+section.db-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 50px;
+}
+section.db-info > h2{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: red;
+    color: black;
+}
+section.db-info .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+section.db-info.section-title{
+    color: black;
+}
+section.db-info .container .db-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.db-info .container .db-item h2{
+    font-size: 28px;
+    color: red;
+}
+section.db-info .container .db-item span{
+    font-size: 20px;
+}
+section.db-info .container .db-item span:last-child{
+    font-weight: 700;
+}/*Db info end*/
+
+/*Popular*/
+section.popular{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+section.popular .container{
+display: flex;
+flex-direction: row;
+width: auto;
+}
+section.popular .section-title{
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+section.popular .container .item{
+    width: 20%;
+    display: flex;
+    padding: 15px;
+    position: relative;
+}
+section.popular .container .item img{
+    width: 100%;
+    object-fit: cover;
+    padding: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+section.popular .container .item h2{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+section.popular .container .item .imdb{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: gold;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+section.popular .container .item .imdb i{
+    margin-right: 4px;
+}
+section.popular .container .item img {
+    width: 100%;
+    object-fit: cover;
+    padding: 0px;
+    border-radius: 10px;
+    filter: grayscale(0%); 
+}
+section.popular .container .item:hover img {
+    filter: grayscale(100%);
+    transition:all 0.8s;
+}
+section.popular .container .item:hover h2,
+section.popular .container .item:hover .imdb {
+    opacity: 1;
+    transform: translateY(0);
+}
+section.popular .container .item h2,
+section.popular .container .item .imdb {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+section.popular .container .item .imdb {
+    right: 20px;
+    top: 20px;
+    background-color: gold;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}/*Popular end*/
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+footer .socials-icons{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: red;
+}
+footer .socials-icons .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .socials-icons .container h2{
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+footer .socials-icons .container .icon-wrapper{
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+footer .socials-icons .container .icon-wrapper i{
+    font-size: 32px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid white;
+    transition: all .5s ease;
+}
+footer .socials-icons .container .icon-wrapper i:hover{
+    background-color: black;
+    color: white;
+    transition: all.5s ease;
+}
+footer .footer-row{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+footer .footer-row .container{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+footer .footer-row .container .footer-column{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+footer .footer-row .container .footer-column h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+footer .footer-row .container .footer-column p{
+    font-size: 16px;
+}
+footer .footer-row .container .footer-column:first-child h2{
+    width: 100%;
+    font-size: 64px;
+}
+
+footer .footer-row .container .footer-column ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+footer .footer-row .container .footer-column ul li{
+    padding: 10px 10px;
+    border-bottom: 2px solid red;
+}
+footer .footer-row .container .footer-column ul li:hover{
+    background-color: red;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+footer .footer-row .container .footer-column ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+footer .footer-row .container .lastest ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-row .container .lastest ul li {
+    width: 19%; 
+    margin-bottom: 5px;
+    margin: 0 2px;
+    margin: 2px;
+    position: relative; 
+}
+
+footer .footer-row .container .lastest ul li img {
+    max-width: 50px;
+    height: auto;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+footer .footer-row .container .lastest ul li img:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+footer .footer-row .container .lastest h2{
+    color: white;
+    margin-top: 19px;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align:justify
+}
+footer .footer-row .container .footer-column h2,
+footer .footer-row .container .footer-column p {
+    text-align: center;
+}
+
+@media screen and (max-width:1440px){
+    .container{
+        width: 1280px;
+    }
+}
+@media screen and (max-width:1366px){
+    .container{
+        width: 100%;
+        padding-left:50px ;
+        padding-right: 50px;
+    }
+    section.how-to-use .container .wrapper{
+        width: 100%;
+    }
+    section.how-to-use .container .wrapper .item {
+        width: 30%;
+        height: auto;
+    }
+}
+@media screen and (max-width:1124px){
+    footer .footer-row .container .footer-column:first-child h2 {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:1024px){
+    header nav{
+        display: none;
+    }
+    header .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container .hamburger-menu{
+        color: red;
+    }
+}
