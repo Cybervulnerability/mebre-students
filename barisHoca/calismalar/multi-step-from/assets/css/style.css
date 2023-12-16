@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+.multi-step-form{
+    width: 780px;
+    margin:0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+    padding:20px;
+}
+.multi-step-form .sidebar{
+    width: 30%;
+    height: 100%;
+    background-image: url("../images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-position: top left;
+    padding:30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.multi-step-form .sidebar ul li .step-number span{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:hsl(213, 96%, 18%);
+    border-radius:50%;
+    border:1px solid #fff;
+}
+.multi-step-form .sidebar ul li .step-number{
+    margin-right: 20px;
+}
+.multi-step-form .sidebar ul li .step-number.active span{
+    background-color: hsl(228, 100%, 84%);
+    border:none;
+}
+.multi-step-form .sidebar ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+    cursor: pointer;
+}
+.multi-step-form .sidebar ul li .step-info h2{
+    font-size: 12px;
+    color: hsl(228, 100%, 84%);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom:5px;
+}
+.multi-step-form .sidebar ul li .step-info span{
+    font-size: 14px;
+    font-weight: 700;
+    color:#fff;
+    text-transform: uppercase;
+}
+.multi-step-form .step-form{
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    width: 70%;
+    padding-left:100px;
+}
+.multi-step-form .step-form .step{
+    display: flex;
+    flex-direction: column;
+}
+.multi-step-form .step-form .step .step-title h2{
+    font-size: 20px;
+    color:hsl(213, 96%, 18%);
+    font-weight: 700;
+    margin-bottom:5px;
+}
+.multi-step-form .step-form .step .step-desc{
+    font-size: 16px;
+    font-weight: 400;
+    color:hsl(231, 11%, 63%);
+    margin-bottom:30px;
+}
+.multi-step-form .step-form .step .form-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px;
+    width: 100%;
+}
+.multi-step-form .step-form .step.hidden{
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+}
+.multi-step-form .step-form .step.last{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.multi-step-form .step-form .step.last div{
+    margin-bottom:15px;
+}
+.multi-step-form .step-form .step.last .step-title h2{
+    font-size: 36px;
+}
+.multi-step-form .step-form .step.last .step-desc{
+    text-align: center;
+}
+.multi-step-form .step-form .step .form-item label{
+    font-size: 14px;
+    font-weight: 500;
+    color:hsl(213, 96%, 18%);
+    margin-bottom:5px;
+}
+.multi-step-form .step-form .step .form-item input{
+    border:none;
+    outline: none;
+    height: 40px;
+    padding-left: 20px;
+    border:1px solid hsl(229, 24%, 87%);
+    border-radius:5px;
+}
+.multi-step-form .step-form .step-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.multi-step-form .step-form .step-pagination .next{
+    padding:20px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 10px;
+    font-weight: 700;
+    color:#fff;
+    cursor:pointer;
+}
+.multi-step-form .step-form .step-pagination .previous{
+    visibility: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.multi-step-form .step-form .step-pagination .previous:hover{
+    font-weight: 700;
+    color:hsl(213, 96%, 18%);
+}
+.multi-step-form .step-form .step .plans{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.multi-step-form .step-form .step .plans .plan-item{
+    width: 30%;
+    height: 150px;
+    padding:15px;
+    border:1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.multi-step-form .step-form .step .plans .plan-item.active{
+    border:1px solid hsl(243, 100%, 62%);
+}
+.multi-step-form .step-form .step .plans .plan-item h3{
+    font-size: 16px;
+    color:hsl(213, 96%, 18%);
+}
+.multi-step-form .step-form .step .plans .plan-item span{
+    font-size: 12px;
+    color:grey;
+}
+.multi-step-form .step-form .step .plans .plan-item span.yearly{
+    display: none;
+    color:hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+.multi-step-form .step-form .step .switchBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+}
+.multi-step-form .step-form .step .switchBtn span{
+    color:grey;
+    font-weight: 700;
+}
+.multi-step-form .step-form .step .switchBtn .switch{
+    content:"";
+    margin-right: 10px;
+    margin-left:10px;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: hsl(213, 96%, 18%);
+    cursor: pointer;
+    position: relative;
+}
+.multi-step-form .step-form .step .switchBtn.yearly .switch .circle{
+    left:calc(55px - 20px);
+    transition: left .5s ease;
+}
+.multi-step-form .step-form .step .switchBtn.monthly .switch .circle{
+    left:5px;
+    transition: left .5s ease;
+}
+.multi-step-form .step-form .step .switchBtn .switch .circle{
+    content:"";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    position:absolute;
+    top:50%;
+    transform: translate(0% ,-50%);
+}
