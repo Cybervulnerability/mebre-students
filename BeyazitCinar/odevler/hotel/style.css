@@ -334,6 +334,10 @@ footer {
     max-width: 150px;
 }
 
+.footer-links{
+    text-align: center;
+}
+
 .footer-links ul {
     list-style: none;
     padding: 0;
@@ -349,11 +353,12 @@ footer {
     font-size: 16px;
 }
 
-.footer-social a {
+.footer-social a i{
     text-decoration: none;
-    color: #fff;
+    position: relative;
+    color: #ffffff;
     font-size: 24px;
-    margin-right: 10px;
+    margin-right: 45px;
 }
 
 .footer-copyright {
